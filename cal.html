@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific calculator</title>
+    <link rel="stylesheet" href="cal.css">
+</head>
+<body>
+  
+  <div class="menu-container"><header id="header">Make calculation easy with me!</header>
+    <div class="hamburger" id="hamburger">   
+      <img src="images.png" alt="mennu">
+    </div>
+    <div class="menu" id="menu">
+      <button onclick="toggleTheme()">Toggle Theme</button>
+      <div>
+        <button class="btn btn-memory" onclick="memoryStore()">MS</button>
+        <button class="btn btn-memory" onclick="memoryRecall()">MR</button>
+        <button class="btn btn-memory" onclick="memoryClear()">MC</button>
+    </div>   
+    <a href="user.html">User guide</a>
+    <button  onclick="saveHistory()">Save History</button>
+    <div class="history" id="history"></div>
+    <button  onclick="clearHistory()">Clear History</button>
+    </div>
+  </div>
+
+  
+<div class="calculator">
+  
+    <input type="text" id="display" class="display" disabled>
+    <div>
+       
+        <button class="btn" onclick="clearDisplay()">AC</button>
+        <button class="btn" onclick="deleteLast()">C</button>
+        <button class="btn" onclick="toggleSign()">±</button>
+        <button class="btn btn-operation" onclick="appendOperator('/')">/</button>
+        
+        <button class="btn" onclick="appendNumber(7)">7</button>
+        <button class="btn" onclick="appendNumber(8)">8</button>
+        <button class="btn" onclick="appendNumber(9)">9</button>
+        <button class="btn btn-operation" onclick="appendOperator('*')">x</button>
+        
+        <button class="btn" onclick="appendNumber(4)">4</button>
+        <button class="btn" onclick="appendNumber(5)">5</button>
+        <button class="btn" onclick="appendNumber(6)">6</button>
+        <button class="btn btn-operation" onclick="appendOperator('-')">-</button>
+        
+        <button class="btn" onclick="appendNumber(1)">1</button>
+        <button class="btn" onclick="appendNumber(2)">2</button>
+        <button class="btn" onclick="appendNumber(3)">3</button>
+        <button class="btn btn-operation" onclick="appendOperator('+')">+</button>
+        
+        <button class="btn" onclick="appendNumber(0)">0</button>
+        <button class="btn" onclick="appendOperator('.')">.</button>
+        <button class="btn btn-equal" onclick="calculate()">=</button>
+    </div>
+   
+    <div>
+        <button class="btn" onclick="calculateTrig('sin')">sin</button>
+        <button class="btn" onclick="calculateTrig('cos')">cos</button>
+        <button class="btn" onclick="calculateTrig('tan')">tan</button>
+        <button class="btn" onclick="toggleDegRad()">Deg/Rad</button>
+
+        <button class="btn" onclick="calculateLog('ln')">ln</button>
+        <button class="btn" onclick="calculateLog('log')">log</button>
+        <button class="btn" onclick="calculateFactorial()">x!</button>
+        <button class="btn" onclick="calculateSquare()">x²</button>
+    </div>
+    
+    
+</div>
+<script src="cal.js"></script>
+
+</body></html>
